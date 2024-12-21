@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           bodyMedium: TextStyle(color: Colors.white, fontSize: 16),
         ),
       ),
-      home: StoryScreen1(),
+      home: StoryScreen(),
     );
   }
 }

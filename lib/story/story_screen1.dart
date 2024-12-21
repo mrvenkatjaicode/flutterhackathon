@@ -17,6 +17,15 @@ class StoryScreen1 extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(height: 20),
+                CircleAvatar(
+                  radius: 35,
+                  backgroundColor: Colors.orange[800], // Background color
+                  backgroundImage: AssetImage(
+                    appIcon,
+                  ),
+                ),
+                const SizedBox(height: 20),
                 const Text(
                   "Play with the most\nenhanced music\nexperience",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),

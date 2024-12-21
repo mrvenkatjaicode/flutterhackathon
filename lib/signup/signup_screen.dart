@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nammamusic/permission/permission_screen.dart';
 
 import '../utils/constant.dart';
 
@@ -43,45 +44,63 @@ class SignupScreen extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Container(
-                      width: MediaQuery.of(context).size.width,
-                      decoration: BoxDecoration(
-                          color: Colors.white12,
-                          borderRadius: BorderRadius.circular(10)),
-                      child: const Padding(
-                        padding: EdgeInsets.all(12.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Icon(Icons.g_mobiledata, color: Colors.white),
-                            Text(
-                              "Continue with Google",
-                              style: TextStyle(fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox()
-                          ],
-                        ),
-                      )),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return const PermissionScreen();
+                        },
+                      ));
+                    },
+                    child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                            color: Colors.white12,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: const Padding(
+                          padding: EdgeInsets.all(12.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Icon(Icons.g_mobiledata, color: Colors.white),
+                              Text(
+                                "Continue with Google",
+                                style: TextStyle(fontWeight: FontWeight.w600),
+                              ),
+                              SizedBox()
+                            ],
+                          ),
+                        )),
+                  ),
                   const SizedBox(height: 14),
-                  Container(
-                      width: MediaQuery.of(context).size.width,
-                      decoration: BoxDecoration(
-                          color: Colors.blue[900],
-                          borderRadius: BorderRadius.circular(10)),
-                      child: const Padding(
-                        padding: EdgeInsets.all(12.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Icon(Icons.facebook_sharp),
-                            Text(
-                              "Continue with Facebook",
-                              style: TextStyle(fontWeight: FontWeight.w600),
-                            ),
-                            SizedBox(),
-                          ],
-                        ),
-                      )),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return const PermissionScreen();
+                        },
+                      ));
+                    },
+                    child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                            color: Colors.blue[900],
+                            borderRadius: BorderRadius.circular(10)),
+                        child: const Padding(
+                          padding: EdgeInsets.all(12.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Icon(Icons.facebook_sharp),
+                              Text(
+                                "Continue with Facebook",
+                                style: TextStyle(fontWeight: FontWeight.w600),
+                              ),
+                              SizedBox(),
+                            ],
+                          ),
+                        )),
+                  ),
                   const SizedBox(height: 20),
                   const Text(
                     "or use your email",

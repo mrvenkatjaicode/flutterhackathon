@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nammamusic/home/home_screen.dart';
 
 import '../utils/constant.dart';
 
@@ -37,21 +38,30 @@ class PermissionScreen extends StatelessWidget {
                   )
                 ],
               ),
-              Container(
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(12)),
-                  child: const Padding(
-                    padding: EdgeInsets.all(15.0),
-                    child: Center(
-                      child: Text(
-                        "Allow access",
-                        style: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.w600),
+              InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return const HomeScreen();
+                    },
+                  ));
+                },
+                child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(12)),
+                    child: const Padding(
+                      padding: EdgeInsets.all(15.0),
+                      child: Center(
+                        child: Text(
+                          "Allow access",
+                          style: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.w600),
+                        ),
                       ),
-                    ),
-                  ))
+                    )),
+              )
             ],
           ),
         ),

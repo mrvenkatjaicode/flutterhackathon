@@ -4,6 +4,7 @@ import 'package:nammamusic/story/story_screen2.dart';
 import 'package:story_view/story_view.dart';
 
 import 'story_screen1.dart';
+import 'story_screen3.dart';
 
 class StoryScreen extends StatelessWidget {
   StoryScreen({super.key});
@@ -22,8 +23,8 @@ class StoryScreen extends StatelessWidget {
         controller: storyController,
         storyItems: [
           StoryItem(const StoryScreen1(), duration: const Duration(seconds: 4)),
-          StoryItem(const StoryScreen1(), duration: const Duration(seconds: 4)),
-          StoryItem(const StoryScreen1(), duration: const Duration(seconds: 4)),
+          StoryItem(const StoryScreen2(), duration: const Duration(seconds: 4)),
+          StoryItem(const StoryScreen3(), duration: const Duration(seconds: 4)),
         ],
         onComplete: () {
           Navigator.push(context, MaterialPageRoute(

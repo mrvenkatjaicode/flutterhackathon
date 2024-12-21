@@ -173,7 +173,7 @@ class StoryScreen1 extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
                           ),
-                          child: Image.asset(aniruthImage, fit: BoxFit.fill)),
+                          child: Image.asset(arrImage, fit: BoxFit.fill)),
                       ClipRRect(
                         child: BackdropFilter(
                           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
@@ -190,20 +190,20 @@ class StoryScreen1 extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(
                                         8.0), // Rounded corners
                                     child: Image.asset(
-                                      aniruthImage, // Replace with your image path
+                                      arrImage, // Replace with your image path
                                       width: 50,
                                       height: 50,
                                       fit: BoxFit.fill,
                                     ),
                                   ),
                                   title: const Text(
-                                    "Dheema",
+                                    "Yennai Izhukkuthadi",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.w600),
                                   ),
                                   subtitle: const Text(
-                                    "Anirudh Ravichandar",
+                                    "A.R.Rahman",
                                     style: TextStyle(
                                         color: Colors.white70,
                                         fontWeight: FontWeight.normal),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/constant.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -35,6 +37,8 @@ class HomeScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width / 1.2,
                       decoration: BoxDecoration(
                           color: Colors.white24,
+                          image: DecorationImage(
+                              image: AssetImage(banner1), fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(20)),
                     ),
                     const SizedBox(width: 20),
@@ -43,6 +47,8 @@ class HomeScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width / 1.2,
                       decoration: BoxDecoration(
                           color: Colors.white24,
+                          image: DecorationImage(
+                              image: AssetImage(banner2), fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(20)),
                     ),
                   ],
@@ -64,6 +70,8 @@ class HomeScreen extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                     color: Colors.white24,
+                    image: DecorationImage(
+                        image: AssetImage(banner3), fit: BoxFit.fill),
                     borderRadius: BorderRadius.circular(20)),
               ),
               const SizedBox(height: 20),
@@ -76,11 +84,28 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
+                    InkWell(
+                      onHover: (details) {
+                        debugPrint(details.toString());
+                      },
+                      child: Container(
+                        height: MediaQuery.of(context).size.height / 4,
+                        width: MediaQuery.of(context).size.width / 2.5,
+                        decoration: BoxDecoration(
+                            color: Colors.white24,
+                            image: DecorationImage(
+                                image: AssetImage(artist1), fit: BoxFit.cover),
+                            borderRadius: BorderRadius.circular(20)),
+                      ),
+                    ),
+                    const SizedBox(width: 20),
                     Container(
                       height: MediaQuery.of(context).size.height / 4,
                       width: MediaQuery.of(context).size.width / 2.5,
                       decoration: BoxDecoration(
                           color: Colors.white24,
+                          image: DecorationImage(
+                              image: AssetImage(artist2), fit: BoxFit.cover),
                           borderRadius: BorderRadius.circular(20)),
                     ),
                     const SizedBox(width: 20),
@@ -89,6 +114,8 @@ class HomeScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width / 2.5,
                       decoration: BoxDecoration(
                           color: Colors.white24,
+                          image: DecorationImage(
+                              image: AssetImage(artist3), fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(20)),
                     ),
                     const SizedBox(width: 20),
@@ -97,14 +124,8 @@ class HomeScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width / 2.5,
                       decoration: BoxDecoration(
                           color: Colors.white24,
-                          borderRadius: BorderRadius.circular(20)),
-                    ),
-                    const SizedBox(width: 20),
-                    Container(
-                      height: MediaQuery.of(context).size.height / 4,
-                      width: MediaQuery.of(context).size.width / 2.5,
-                      decoration: BoxDecoration(
-                          color: Colors.white24,
+                          image: DecorationImage(
+                              image: AssetImage(artist4), fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(20)),
                     ),
                   ],
@@ -125,6 +146,8 @@ class HomeScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width / 2.2,
                       decoration: BoxDecoration(
                           color: Colors.white24,
+                          image: DecorationImage(
+                              image: AssetImage(album1), fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(20)),
                     ),
                     const SizedBox(width: 20),
@@ -133,6 +156,8 @@ class HomeScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width / 2.2,
                       decoration: BoxDecoration(
                           color: Colors.white24,
+                          image: DecorationImage(
+                              image: AssetImage(album2), fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(20)),
                     ),
                     const SizedBox(width: 20),
@@ -141,6 +166,8 @@ class HomeScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width / 2.2,
                       decoration: BoxDecoration(
                           color: Colors.white24,
+                          image: DecorationImage(
+                              image: AssetImage(album3), fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(20)),
                     ),
                     const SizedBox(width: 20),
@@ -149,6 +176,8 @@ class HomeScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width / 2.2,
                       decoration: BoxDecoration(
                           color: Colors.white24,
+                          image: DecorationImage(
+                              image: AssetImage(album4), fit: BoxFit.fill),
                           borderRadius: BorderRadius.circular(20)),
                     ),
                   ],
@@ -201,6 +230,33 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black,
+        unselectedItemColor: Colors.white24,
+        selectedItemColor: Colors.white,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.music_note),
+            label: 'Music',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.control_point),
+            label: 'Contribute',
+          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.donut_large_rounded),
+          //   label: 'Identify',
+          // ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.search),
+          //   label: 'Search',
+          // ),
+        ],
       ),
     );
   }

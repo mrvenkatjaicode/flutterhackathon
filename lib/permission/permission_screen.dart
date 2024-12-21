@@ -26,13 +26,13 @@ class PermissionScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width,
                     ),
                   ),
-                  SizedBox(height: 20),
-                  Text(
+                  const SizedBox(height: 20),
+                  const Text(
                     "Please allow us to know the music you're listening to",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                   ),
-                  SizedBox(height: 20),
-                  Text(
+                  const SizedBox(height: 20),
+                  const Text(
                     "We just need to know which songs you're playing so we can show you the lyrics. We care about your privacy",
                     style: TextStyle(fontSize: 16, color: Colors.grey),
                   )

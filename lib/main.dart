@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'permission/permission_screen.dart';
-import 'signup/signup_screen.dart';
 import 'story/story_screen.dart';
-import 'story/story_screen1.dart';
 
 void main() {
   runApp(const MyApp());

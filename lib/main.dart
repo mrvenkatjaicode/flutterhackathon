@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'permission/permission_screen.dart';
 import 'signup/signup_screen.dart';
+import 'story/story_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           bodyMedium: TextStyle(color: Colors.white, fontSize: 16),
         ),
       ),
-      home: const SignupScreen(),
+      home: StoryScreen1(),
     );
   }
 }

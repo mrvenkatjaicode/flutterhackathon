@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.flutterhackaton.app-mergeDebugResources-24:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.flutterhackaton.app-mergeDebugResources-25:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "/Users/venkateswaranjayaraj/Documents/github/flutterhackathon/android/app/src/main/res/values-night/styles.xml",

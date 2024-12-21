@@ -16,23 +16,29 @@ class SignupScreen extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  CircleAvatar(
-                    radius: 35,
-                    backgroundColor: Colors.orange[800], // Background color
-                    backgroundImage: AssetImage(
-                      appIcon,
-                    ),
+                  const SizedBox(height: 110),
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 35,
+                        backgroundColor: Colors.orange[800], // Background color
+                        backgroundImage: AssetImage(
+                          appIcon,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      const Text(
+                        "Get Started!",
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.w600),
+                      ),
+                      const SizedBox(height: 7),
+                      const Text(
+                        "Join our amazing community of music lovers",
+                        style: TextStyle(fontSize: 16, color: Colors.grey),
+                      )
+                    ],
                   ),
-                  const SizedBox(height: 20),
-                  const Text(
-                    "Get Started!",
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
-                  ),
-                  const SizedBox(height: 7),
-                  const Text(
-                    "Join our amazing community of music lovers",
-                    style: TextStyle(fontSize: 16, color: Colors.grey),
-                  )
                 ],
               ),
               Column(
@@ -44,14 +50,19 @@ class SignupScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10)),
                       child: const Padding(
                         padding: EdgeInsets.all(12.0),
-                        child: Center(
-                          child: Text(
-                            "Continue with Google",
-                            style: TextStyle(fontWeight: FontWeight.w600),
-                          ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Icon(Icons.g_mobiledata, color: Colors.white),
+                            Text(
+                              "Continue with Google",
+                              style: TextStyle(fontWeight: FontWeight.w600),
+                            ),
+                            SizedBox()
+                          ],
                         ),
                       )),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 14),
                   Container(
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
@@ -59,22 +70,23 @@ class SignupScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10)),
                       child: const Padding(
                         padding: EdgeInsets.all(12.0),
-                        child: Center(
-                          child: Text(
-                            "Continue with Facebook",
-                            style: TextStyle(fontWeight: FontWeight.w600),
-                          ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Icon(Icons.facebook_sharp),
+                            Text(
+                              "Continue with Facebook",
+                              style: TextStyle(fontWeight: FontWeight.w600),
+                            ),
+                            SizedBox(),
+                          ],
                         ),
                       )),
+                  const SizedBox(height: 20),
                   const Text(
-                    "Get Started!",
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+                    "or use your email",
+                    style: TextStyle(fontWeight: FontWeight.w600),
                   ),
-                  const SizedBox(height: 7),
-                  const Text(
-                    "Join our amazing community of music lovers",
-                    style: TextStyle(fontSize: 16, color: Colors.grey),
-                  )
                 ],
               ),
               const Column(

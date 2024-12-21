@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'permission/permission_screen.dart';
 import 'signup/signup_screen.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.black,
         appBarTheme: const AppBarTheme(
           color: Colors.black, // AppBar background color
-          iconTheme: IconThemeData(color: Colors.white), // AppBar icons color
+          iconTheme: IconThemeData(color: Colors.orange), // AppBar icons color
         ),
         textTheme: const TextTheme(
           bodyLarge: TextStyle(color: Colors.black, fontSize: 18),
